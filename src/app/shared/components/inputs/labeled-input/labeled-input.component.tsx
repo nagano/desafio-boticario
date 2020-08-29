@@ -5,6 +5,7 @@ interface LabeledInputProps {
     inputClass?: string;
     id?: string;
     type?: string;
+    label: string;
     value: string|number;
     onChange: (updatedValue: string|number) => void;
     onKeyDown?: () => void;
@@ -13,7 +14,7 @@ interface LabeledInputProps {
 export const LabeledInput = (props: LabeledInputProps): JSX.Element => {
     return (
         <main className={`flexbox flex-column ${props.containerClass}`}>
-            <label className="fz-label text--gray-4 mb-5" htmlFor={props.id}>E-mail</label>
+            <label className="fz-label text--gray-4 mb-5" htmlFor={props.id}>{props.label}</label>
             <input 
                 className={props.inputClass}
                 id={props.id}

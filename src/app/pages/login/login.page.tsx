@@ -5,6 +5,7 @@ import MockedAPI from '../../shared/services/api.service';
 import Notification, { NOTIFICATION_ID } from '../../shared/services/notification.service';
 // Components
 import { LoadingButton } from '../../shared/components/buttons/loading-button/loading-button.component';
+import { LabeledInput } from '../../shared/components/inputs/labeled-input/labeled-input.component';
 // History
 import { history } from '../../App';
 // Style
@@ -54,23 +55,22 @@ const LoginPage = (): JSX.Element => {
                 </h1>
 
                 <div className="mb-30">
-                    <section className="flexbox flex-column mb-20">
-                        <label className="fz-label text--gray-4 mb-5" htmlFor="email">E-mail</label>
-                        <input 
-                            id="email"
-                            type="text"
-                            value={email}
-                            onChange={(event) => setEmail(event.target.value)} />
-                    </section>
+                    <LabeledInput
+                        containerClass="mb-20"
+                        inputClass="login__input"
+                        id="email"
+                        label="E-mail"
+                        value={email}
+                        onChange={(updatedEmail: string|number) => setEmail(updatedEmail as string)} />
 
-                    <section className="flexbox flex-column mb-30">
-                        <label className="fz-label text--gray-4 mb-5" htmlFor="password">Password</label>
-                        <input 
-                            id="password"
-                            type="password"
-                            value={password}
-                            onChange={(event) => setPassword(event.target.value)} />
-                    </section>
+                    <LabeledInput
+                        containerClass="mb-30"
+                        inputClass="login__input"
+                        id="password"
+                        type="password"
+                        label="Senha"
+                        value={password}
+                        onChange={(updatedPassword: string|number) => setPassword(updatedPassword as string)} />
 
                     <div className="flexbox justify-content--center">
                         <LoadingButton
