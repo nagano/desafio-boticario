@@ -1,0 +1,39 @@
+@import '../base/appDimensions';
+@import '../base/colors';
+@import '../layout/mediaQuery';
+
+// Root
+#root {
+    height: 100%;
+    background-color: $gray5;
+}
+
+button {
+    box-shadow: $boxShadowMediumDefault;
+    border-radius: $cornerRadius;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1.4rem 2.2rem;
+    outline: none;
+
+    @include bp-small {
+        font-size: 1.3rem;
+    }
+}
+
+button:active {
+	box-shadow: $boxShadowActive;
+}
+
+// Button for touch screens
+button.active-touch {
+    box-shadow: $boxShadowActive;
+}
+
+// HR
+hr {
+    border: 0;
+    border-top: 1px solid $gray50;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

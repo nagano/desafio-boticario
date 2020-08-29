@@ -1,0 +1,14 @@
+@import '../base/colors';
+
+// ***************************************
+//    Set color
+// ***************************************
+@mixin setColor($property) {
+    &.blue-1 { #{$property}: $blue1; }
+    &.blue-2 { #{$property}: $blue2; }
+    &.green-1 { #{$property}: $green1; }
+    &.green-2 { #{$property}: $green2; }
+    &.orange-1 { #{$property}: $orange1; }
+    &.orange-2 { #{$property}: $orange2; }
+    &.white { #{$property}: $white; }
+}

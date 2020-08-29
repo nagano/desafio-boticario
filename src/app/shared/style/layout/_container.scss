@@ -1,0 +1,7 @@
+@import './mediaQuery';
+
+.default-page-container {
+    @include bp-small {
+        width: 100%;
+    }
+}

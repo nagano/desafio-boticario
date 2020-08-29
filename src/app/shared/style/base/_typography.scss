@@ -1,0 +1,80 @@
+@import 'colors';
+@import '../layout/mediaQuery';
+
+// Default values
+$defaultFont: 'Open Sans', sans-serif;
+$defaultFontSize: 12px !default;
+$defaultLineHeight: 1.25em;
+
+// *******************************************************
+//      Default font
+// *******************************************************
+.default-font {
+    font-size: $defaultFontSize;
+    font-family: $defaultFont;
+    font-size-adjust: 0.5;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: $defaultLineHeight;
+}
+
+html, body,
+h1, h2, h3, h4, h5, h6, 
+button, input, textarea, a,
+label, select {
+	@extend .default-font;
+	color: $defaultFontColor;
+}
+
+// *******************************************************
+//      Headers
+// *******************************************************
+h1 {
+    font-size: 2.4rem;
+    @extend .text--bold;
+
+    @include bp-small {
+        font-size: 2.1rem;
+    }
+}
+h2 {
+    font-size: 2.1rem;
+    @extend .text--bold;
+
+    @include bp-small {
+        font-size: 1.8rem;
+    }
+}
+h3 {
+    font-size: 1.8rem;
+    @extend .text--bold;
+
+    @include bp-small {
+        font-size: 1.5rem;
+    }
+}
+h4 {
+    font-size: 1.5rem;
+    @extend .text--bold;
+
+    @include bp-small {
+        font-size: 1.2rem;
+    }
+}
+
+// *******************************************************
+//      Weight
+// *******************************************************
+.text--regular { font-weight: 400; }
+.text--bold { font-weight: 600; }
+
+// *******************************************************
+//      Color
+// *******************************************************
+.text--white { color: $white; }
+
+// *******************************************************
+//      Align
+// *******************************************************
+.text--align-center { text-align: center; }
