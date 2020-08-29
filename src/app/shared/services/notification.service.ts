@@ -11,7 +11,8 @@ const defaultOptions: ToastOptions = {
 
 export enum NOTIFICATION_ID {
     OPERATION_IN_PROGRESS = 'OPERATION_IN_PROGRESS',
-    INCOMPLETE_FORM = 'INCOMPLETE_FORM'
+    INCOMPLETE_FORM = 'INCOMPLETE_FORM',
+    INCORRECT_FORM = 'INCORRECT_FORM'
 };
 
 export default {

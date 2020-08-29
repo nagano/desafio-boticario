@@ -1,7 +1,15 @@
 @import './mediaQuery';
 
 .default-page-container {
-    @include bp-small {
-        width: 100%;
+    width: 90%;
+    max-width: 1024px;
+    background-color: $white;
+    box-shadow: $boxShadowLowDefault;
+    padding: 35px 25px;
+    margin: 0 auto;
+
+    @include bp-medium {
+        width: 95%;
+        max-width: 400px;
     }
 }

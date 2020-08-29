@@ -1,0 +1,26 @@
+@import '../../shared/style/layout/mediaQuery';
+@import '../../shared/style/base/colors';
+@import '../../shared/style/base/appDimensions';
+
+.sign-up {
+
+    &__input {
+        padding: 12px 6px;
+        border: 1px solid $gray3;
+        border-radius: $cornerRadius;
+
+        &:focus {
+            border-color: $green1;
+        }
+    }
+
+    &__button {
+        height: 50px;
+        min-width: 110px;
+        background-color: $orange1;
+
+        @include bp-small {
+            width: 100%;
+        }
+    }
+}

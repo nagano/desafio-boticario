@@ -1,4 +1,7 @@
+// Services
 import Hash from './hash.service';
+// Models
+import { User } from '../models/user.model';
 
 export default {
 
@@ -12,7 +15,21 @@ export default {
                 resolve();
             });
         });
-    }
+    },
+
+    signUp(user: User): Promise<null> {
+        console.log('Registering user:');
+        console.log(`Name: ${user.name}`);
+        console.log(`CPF: ${user.cpf}`);
+        console.log(`E-mail: ${user.email}`);
+        console.log(`SHA1 encrypted password: ${Hash.toSHA1(user.password)}`);
+
+        return new Promise((resolve, reject) => {
+            randomTimeout(() => {
+                resolve();
+            });
+        });
+    },
 
 };
 
