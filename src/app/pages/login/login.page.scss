@@ -1,3 +1,31 @@
+@import '../../shared/style/layout/mediaQuery';
+@import '../../shared/style/base/colors';
+@import '../../shared/style/base/appDimensions';
+
 .login {
-    
+
+    &__container {
+        background-color: $white;
+        box-shadow: $boxShadowLowDefault;
+
+        @include bp-medium {
+            width: 95%;
+            max-width: 400px;
+            padding: 35px 25px;
+        }
+
+        & input {
+            padding: 10px 0;
+            border-bottom: 1px solid $gray3;
+        }
+    }
+
+    &__button {
+        background-color: $orange1;
+        min-width: 110px;
+
+        @include bp-small {
+            width: 100%;
+        }
+    }
 }
