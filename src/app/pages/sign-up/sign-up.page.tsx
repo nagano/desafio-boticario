@@ -92,25 +92,28 @@ const SignUpPage = (): JSX.Element => {
                             onChange={(event) => setEmail(event.target.value)} />
                     </section>
 
-                    <section className="flexbox flex-column mb-20">
-                        <label className="fz-label text--gray-4 mb-5" htmlFor="password">Senha</label>
-                        <input 
-                            className="sign-up__input"
-                            id="password"
-                            type="text"
-                            value={password}
-                            onChange={(event) => setPassword(event.target.value)} />
-                    </section>
+                    <div className="sign-up__password-container flexbox mb-20">
+                        <section className="flexbox flex-column width-50 mr-5">
+                            <label className="fz-label text--gray-4 mb-5" htmlFor="password">Senha</label>
+                            <input 
+                                className="sign-up__input"
+                                id="password"
+                                type="text"
+                                value={password}
+                                onChange={(event) => setPassword(event.target.value)} />
+                        </section>
 
-                    <section className="flexbox flex-column mb-20">
-                        <label className="fz-label text--gray-4 mb-5" htmlFor="confirmPassword">Confirme sua senha</label>
-                        <input 
-                            className="sign-up__input"
-                            id="confirmPassword"
-                            type="password"
-                            value={confirmPassword}
-                            onChange={(event) => setConfirmPassword(event.target.value)} />
-                    </section>
+                        <section className="flexbox flex-column width-50 ml-5">
+                            <label className="fz-label text--gray-4 mb-5" htmlFor="confirmPassword">Confirme sua senha</label>
+                            <input 
+                                className="sign-up__input"
+                                id="confirmPassword"
+                                type="password"
+                                value={confirmPassword}
+                                onChange={(event) => setConfirmPassword(event.target.value)} />
+                        </section>
+                    </div>
+
                 </div>
 
                 <div className="flexbox justify-content--center">
