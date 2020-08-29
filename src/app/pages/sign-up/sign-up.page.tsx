@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import MockedAPI from '../../shared/services/api.service';
 import Notification, { NOTIFICATION_ID } from '../../shared/services/notification.service';
 // Components
-import { MaskedInput } from '../../shared/components/masked-input/masked-input.component';
+import { MaskedInput } from '../../shared/components/inputs/masked-input/masked-input.component';
 import { LoadingButton } from '../../shared/components/buttons/loading-button/loading-button.component';
 // History
 import { history } from '../../App';
