@@ -5,13 +5,13 @@
 .login {
 
     &__container {
+        max-width: 400px;
         background-color: $white;
         box-shadow: $boxShadowLowDefault;
+        padding: 35px 25px;
 
         @include bp-medium {
             width: 95%;
-            max-width: 400px;
-            padding: 35px 25px;
         }
 
         & input {

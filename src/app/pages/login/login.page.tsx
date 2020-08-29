@@ -36,13 +36,15 @@ const LoginPage = (): JSX.Element => {
                             onChange={(event) => setPassword(event.target.value)} />
                     </section>
 
-                    <LoadingButton
-                        className="login__button text--white"
-                        isLoading={isLoading}
-                        onClick={() => {}}
-                    >
-                        Entrar
-                    </LoadingButton>
+                    <div className="flexbox justify-content--center">
+                        <LoadingButton
+                            className="login__button text--white"
+                            isLoading={isLoading}
+                            onClick={() => {}}
+                        >
+                            Entrar
+                        </LoadingButton>
+                    </div>
                 </div>
 
                 <footer>
