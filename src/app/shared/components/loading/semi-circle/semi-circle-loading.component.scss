@@ -1,0 +1,22 @@
+@import '../../../style/utils/animations';
+@import '../../../style/base/colors';
+@import '../../../style/utils/mixins';
+
+.semi-circle-loading {
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    @include setColor('border-right-color');
+    @include setColor('border-bottom-color');
+    @include setColor('border-left-color');
+    border-top-color: transparent;
+
+    @include keyframes(semi-circle-loading) {
+        0% {  transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @include animation(semi-circle-loading);
+    @include animation-duration(1s);
+    @include animation-iteration-count(infinite);
+}
