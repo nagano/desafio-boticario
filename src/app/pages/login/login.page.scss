@@ -21,8 +21,9 @@
     }
 
     &__button {
-        background-color: $orange1;
+        height: 50px;
         min-width: 110px;
+        background-color: $orange1;
 
         @include bp-small {
             width: 100%;

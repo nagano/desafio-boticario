@@ -38,3 +38,18 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+// Notification
+.toast-notification {
+    &__sucesss {
+        background-color: rgba(16, 145, 235, 0.75);
+    }
+
+    &__error {
+        background-color: rgba(223, 35, 35, 0.75);
+    }
+
+    &__info {
+        background-color: rgba(254, 194, 40, 0.75)
+    }
+}
