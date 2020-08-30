@@ -1,5 +1,6 @@
 // Services
 import Hash from './hash.service';
+import Util from './util.service';
 // Models
 import { User } from '../models/user.model';
 import { Order } from '../models/order.model';
@@ -68,21 +69,11 @@ export default {
 };
 
 /**
- * Return a random INT between max(inclusive) and min(inclusive) values.
- * @param {number} max 
- * @param {number} min 
- * @returns {number}
- */
-const getRandomNumber = (max: number, min: number): number => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-/**
  * setTimeout function with random time (between 250ms and 1500ms) for callback.
  * @param callback 
  */
 const randomTimeout = (callback: () => void) => {
     setTimeout(() => {
         callback();
-    }, getRandomNumber(250, 1500));
+    }, Util.getRandomNumber(250, 1500));
 };
