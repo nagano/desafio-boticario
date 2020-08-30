@@ -1,6 +1,6 @@
 export default {
 
-    addThousandSeparator: (value: number, decimalCases: number = 2): string => {
+    addThousandSeparator(value: number, decimalCases: number = 2): string {
         return value
                 .toFixed(decimalCases)
                 .replace('.', ',')
