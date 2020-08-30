@@ -1,0 +1,29 @@
+@import '../../../shared/style/base/appDimensions';
+
+$col1MinWidth: 130px;
+$col2MinWidth: 80px;
+$col3MinWidth: 120px;
+
+.order-card {
+    padding: 20px 15px;
+    box-shadow: $boxShadowMediumDefault;
+
+    &__col-1 {
+        flex: 1;
+        min-width: $col1MinWidth;
+    }
+
+    &__col-2 {
+        flex: 1;
+        min-width: $col2MinWidth;
+    }
+
+    &__col-3 {
+        flex: 1;
+        min-width: $col3MinWidth;
+    }
+
+    &__cashback {
+        font-size: 1.2rem;
+    }
+}
