@@ -9,7 +9,7 @@ interface MaskedInputProps {
     showMask?: boolean;
     placeholder?: string;
     onChange: (updatedValue: string) => void;
-    onKeyDown?: () => void;
+    onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
 };
 
 export const MaskedInput = (props: MaskedInputProps): JSX.Element => {
