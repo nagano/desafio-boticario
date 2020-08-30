@@ -1,4 +1,5 @@
 @import '../../../shared/style/base/appDimensions';
+@import '../../../shared/style/base/colors';
 
 $col1MinWidth: 130px;
 $col2MinWidth: 80px;
@@ -7,6 +8,7 @@ $col3MinWidth: 120px;
 .order-card {
     padding: 20px 15px;
     box-shadow: $boxShadowMediumDefault;
+    background-color: $white;
 
     &__col-1 {
         flex: 1;

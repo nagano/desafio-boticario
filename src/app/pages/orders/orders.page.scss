@@ -1,3 +1,11 @@
+@import '../../shared/style/base/appDimensions';
+@import '../../shared/style/layout/mediaQuery';
+
 .orders {
-    
+    padding-top: $headerHeight;
+
+    @include bp-medium {
+        padding: 20px 10px;
+        padding-top: $headerHeightMobile + 20;
+    }
 }

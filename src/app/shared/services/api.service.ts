@@ -31,6 +31,26 @@ export default {
         });
     },
 
+    listOrders(): Promise<null> {
+        console.log('Listing user orders');
+
+        return new Promise((resolve, reject) => {
+            randomTimeout(() => {
+                resolve();
+            });
+        });
+    },
+
+    getTotalCashback(): Promise<null> {
+        console.log("Get user's total cashback");
+
+        return new Promise((resolve, reject) => {
+            randomTimeout(() => {
+                resolve();
+            });
+        });
+    }
+
 };
 
 /**
