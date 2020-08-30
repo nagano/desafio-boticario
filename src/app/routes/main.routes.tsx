@@ -6,10 +6,11 @@ import Storage from '../shared/services/storage.service';
 import Notification from '../shared/services/notification.service';
 // Constants
 import { STORAGE_KEY } from "../shared/constants/storage.constants";
+// Components
+import { AuthenticatedRoutes } from './authenticated.routes';
 // Pages
 import LoginPage from '../pages/login/login.page';
 import SignUpPage from "../pages/sign-up/sign-up.page";
-import OrdersPage from "../pages/orders/orders.page";
 
 const NOT_AUTHENTICATED_MSG: string = 'Usuário não autenticado ou sessão expirada.';
 
@@ -34,13 +35,13 @@ const AuthenticatedPath = ({ component, ...rest }: RouteProps) => {
 	return (<Route {...rest} render={render} />);
 };
 
-export const MainRoutes = () => {
+export const MainRoutes = (props: RouteComponentProps) => {
 	return (
 		<Switch>
             <Route path="/" exact component={LoginPage} />
             <Route path="/sign-up" exact component={SignUpPage} />
 
-            <AuthenticatedPath path="/orders" exact component={OrdersPage} />
+            <AuthenticatedPath path={`${props.match.url}`} component={AuthenticatedRoutes} />
 
             <Redirect to="/" />
         </Switch>
