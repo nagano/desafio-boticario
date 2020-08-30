@@ -65,6 +65,7 @@ export const AddOrderModal = (props: AddOrderModalProps): JSX.Element => {
                     containerClass="mb-20"
                     inputClass="add-order-modal__input"
                     id="value"
+                    type="number"
                     label="Valor"
                     value={value}
                     onChange={(updatedValue: string|number) => setValue(updatedValue as number)} />
