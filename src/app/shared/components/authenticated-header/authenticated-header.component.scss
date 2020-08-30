@@ -14,25 +14,8 @@
     @include bp-medium {
         height: $headerHeightMobile;
     }
-}
 
-.menu-button {
-    height: $headerHeight - 30;
-    width: $headerHeight - 25;
-    border: 1px solid $gray4;
-    box-shadow: 1px 1px 2px #aaa;
-
-    &.active {
-        box-shadow: none;
-    }
-
-    @include bp-medium {
-        height: $headerHeightMobile - 20;
-        width: $headerHeightMobile - 15;
-    }
-
-    &__line {
-        width: 60%;
-        border-top: 2px solid $gray4;
+    &__logo {
+        height: 30px;
     }
 }

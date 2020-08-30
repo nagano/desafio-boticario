@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history'
 import { ToastContainer } from 'react-toastify';
+import ReactModal from 'react-modal';
 
 // Routes
 import { MainRoutes } from './routes/main.routes';
@@ -13,6 +14,9 @@ import "react-datepicker/dist/react-datepicker.min.css";
 export const history = createBrowserHistory();
 
 const App = (): JSX.Element => {
+    // Setup react-modal
+    ReactModal.setAppElement('#root');
+
     return (
         <React.Fragment>
             <Router history={history}>
