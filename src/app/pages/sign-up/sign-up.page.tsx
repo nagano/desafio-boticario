@@ -4,14 +4,12 @@ import React, { useState } from 'react';
 import MockedAPI from '../../shared/services/api.service';
 import Notification, { NOTIFICATION_ID } from '../../shared/services/notification.service';
 // Components
-import { MaskedInput } from '../../shared/components/inputs/masked-input/masked-input.component';
 import { LoadingButton } from '../../shared/components/buttons/loading-button/loading-button.component';
+import { LabeledInput } from '../../shared/components/inputs/labeled-input/labeled-input.component';
 // History
 import { history } from '../../App';
 // Style
 import './sign-up.page.scss';
-import { LabeledInput } from '../../shared/components/inputs/labeled-input/labeled-input.component';
-import { PasswordInput } from '../../shared/components/inputs/password-input/password-input.component';
 
 // Notification messages
 const INCOMPLETE_FORM_MSG: string = 'Por favor, preencha todos os campos.';
@@ -106,7 +104,7 @@ const SignUpPage = (): JSX.Element => {
                             type="password"
                             label="Confirme sua senha"
                             value={confirmPassword}
-                            onChange={(updatedConfirmPassword: string|number) => setPassword(updatedConfirmPassword as string)} />
+                            onChange={(updatedConfirmPassword: string|number) => setConfirmPassword(updatedConfirmPassword as string)} />
                     </div>
 
                 </div>
