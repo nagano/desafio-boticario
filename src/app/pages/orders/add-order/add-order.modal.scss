@@ -1,0 +1,30 @@
+@import '../../../shared/style/base/colors';
+@import '../../../shared/style/base/appDimensions';
+@import '../../../shared/style/layout/mediaQuery';
+
+.add-order-modal {
+    width: 50%;
+    max-width: 400px;
+
+    @include bp-small {
+        width: 95%;
+    }
+    
+    &__input {
+        padding: 12px 6px;
+        border: 1px solid $gray3;
+        border-radius: $cornerRadius;
+
+        &.password {
+            padding: 8px 6px;
+        }
+
+        &:focus {
+            border-color: $green1;
+        }
+    }
+
+    & .react-datepicker-wrapper {
+        width: 100%;
+    }
+}
