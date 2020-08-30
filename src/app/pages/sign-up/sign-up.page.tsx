@@ -10,6 +10,8 @@ import { LoadingButton } from '../../shared/components/buttons/loading-button/lo
 import { history } from '../../App';
 // Style
 import './sign-up.page.scss';
+import { LabeledInput } from '../../shared/components/inputs/labeled-input/labeled-input.component';
+import { PasswordInput } from '../../shared/components/inputs/password-input/password-input.component';
 
 // Notification messages
 const INCOMPLETE_FORM_MSG: string = 'Por favor, preencha todos os campos.';
@@ -62,56 +64,49 @@ const SignUpPage = (): JSX.Element => {
                 </h1>
 
                 <div className="mb-30">
-                    <section className="flexbox flex-column mb-20">
-                        <label className="fz-label text--gray-4 mb-5" htmlFor="name">Nome completo</label>
-                        <input 
-                            className="sign-up__input"
-                            id="name"
-                            type="text"
-                            value={name}
-                            onChange={(event) => setName(event.target.value)} />
-                    </section>
+                    <LabeledInput
+                        containerClass="mb-20"
+                        inputClass="sign-up__input"
+                        id="name"
+                        label="Nome completo"
+                        value={name}
+                        onChange={(updatedName: string|number) => setName(updatedName as string)} />
 
-                    <section className="flexbox flex-column mb-20">
-                        <label className="fz-label text--gray-4 mb-5" htmlFor="cpf">CPF</label>
-                        <MaskedInput
-                            className="sign-up__input"
-                            id="cpf"
-                            mask={[/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/]}
-                            value={cpf}
-                            onChange={(updatedCpf: string) => setCpf(updatedCpf)} />
-                    </section>
+                    <LabeledInput
+                        containerClass="mb-20"
+                        inputClass="sign-up__input"
+                        id="cpf"
+                        label="CPF"
+                        value={cpf}
+                        mask={[/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/]}
+                        onChange={(updatedCpf: string|number) => setCpf(updatedCpf as string)} />
 
-                    <section className="flexbox flex-column mb-20">
-                        <label className="fz-label text--gray-4 mb-5" htmlFor="email">E-mail</label>
-                        <input 
-                            className="sign-up__input"
-                            id="email"
-                            type="text"
-                            value={email}
-                            onChange={(event) => setEmail(event.target.value)} />
-                    </section>
+                    <LabeledInput
+                        containerClass="mb-20"
+                        inputClass="sign-up__input"
+                        id="email"
+                        label="E-mail"
+                        value={email}
+                        onChange={(updatedEmail: string|number) => setEmail(updatedEmail as string)} />
 
                     <div className="sign-up__password-container flexbox mb-20">
-                        <section className="flexbox flex-column width-50 mr-5">
-                            <label className="fz-label text--gray-4 mb-5" htmlFor="password">Senha</label>
-                            <input 
-                                className="sign-up__input"
-                                id="password"
-                                type="text"
-                                value={password}
-                                onChange={(event) => setPassword(event.target.value)} />
-                        </section>
+                        <LabeledInput
+                            containerClass="width-50 mr-5"
+                            inputClass="sign-up__input password"
+                            id="password"
+                            type="password"
+                            label="Senha"
+                            value={password}
+                            onChange={(updatedPassword: string|number) => setPassword(updatedPassword as string)} />
 
-                        <section className="flexbox flex-column width-50 ml-5">
-                            <label className="fz-label text--gray-4 mb-5" htmlFor="confirmPassword">Confirme sua senha</label>
-                            <input 
-                                className="sign-up__input"
-                                id="confirmPassword"
-                                type="password"
-                                value={confirmPassword}
-                                onChange={(event) => setConfirmPassword(event.target.value)} />
-                        </section>
+                        <LabeledInput
+                            containerClass="width-50 ml-5"
+                            inputClass="sign-up__input password"
+                            id="confirmPassword"
+                            type="password"
+                            label="Confirme sua senha"
+                            value={confirmPassword}
+                            onChange={(updatedConfirmPassword: string|number) => setPassword(updatedConfirmPassword as string)} />
                     </div>
 
                 </div>

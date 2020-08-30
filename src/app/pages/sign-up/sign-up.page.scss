@@ -17,6 +17,10 @@
         border: 1px solid $gray3;
         border-radius: $cornerRadius;
 
+        &.password {
+            padding: 8px 6px;
+        }
+
         &:focus {
             border-color: $green1;
         }
@@ -26,7 +30,7 @@
         @include bp-small {
             flex-direction: column;
 
-            & > section.width-50 {
+            & > .width-50 {
                 width: 100%;
                 margin: 0;
 
