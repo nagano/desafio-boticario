@@ -66,7 +66,7 @@ const OrdersPage = (): JSX.Element => {
     }, []);
 
     return (
-        <main className="orders">
+        <main className="orders flexbox flex-column align-items--center">
             <header className="mb-20">
                 <h3 className="text--align-center">Cashback acumulado:</h3>
                 <h2 className="text--align-center">

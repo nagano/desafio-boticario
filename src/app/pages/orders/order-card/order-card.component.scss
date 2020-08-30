@@ -1,5 +1,6 @@
 @import '../../../shared/style/base/appDimensions';
 @import '../../../shared/style/base/colors';
+@import '../../../shared/style/layout/mediaQuery';
 
 $col1MinWidth: 130px;
 $col2MinWidth: 80px;
@@ -9,6 +10,7 @@ $col3MinWidth: 120px;
     padding: 20px 15px;
     box-shadow: $boxShadowMediumDefault;
     background-color: $white;
+    max-width: 600px;
 
     &__col-1 {
         flex: 1;
@@ -26,6 +28,6 @@ $col3MinWidth: 120px;
     }
 
     &__cashback {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }

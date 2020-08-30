@@ -3,7 +3,7 @@
 
 // Default values
 $defaultFont: 'Open Sans', sans-serif;
-$defaultFontSize: 12px !default;
+$defaultFontSize: 14px !default;
 $defaultLineHeight: 1.25em;
 
 // *******************************************************
@@ -13,6 +13,10 @@ $defaultLineHeight: 1.25em;
     font-size: $defaultFontSize;
     font-family: $defaultFont;
     font-size-adjust: 0.5;
+
+    @include bp-small {
+        font-size: 0.85rem;
+    }
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

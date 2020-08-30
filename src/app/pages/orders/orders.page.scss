@@ -2,7 +2,7 @@
 @import '../../shared/style/layout/mediaQuery';
 
 .orders {
-    padding-top: $headerHeight;
+    padding-top: $headerHeight + 20;
 
     @include bp-medium {
         padding: 20px 10px;
