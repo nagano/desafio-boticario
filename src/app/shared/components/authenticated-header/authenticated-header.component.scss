@@ -1,0 +1,38 @@
+@import '../../style/base/appDimensions';
+@import '../../style/base/colors';
+@import '../../style/layout/mediaQuery';
+
+.authenticated-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: $headerHeight;
+    box-shadow: $headerBoxShadow;
+    background-color: $gray2;
+
+    @include bp-medium {
+        height: $headerHeightMobile;
+    }
+}
+
+.menu-button {
+    height: $headerHeight - 30;
+    width: $headerHeight - 25;
+    border: 1px solid $gray4;
+    box-shadow: 1px 1px 2px #aaa;
+
+    &.active {
+        box-shadow: none;
+    }
+
+    @include bp-medium {
+        height: $headerHeightMobile - 20;
+        width: $headerHeightMobile - 15;
+    }
+
+    &__line {
+        width: 60%;
+        border-top: 2px solid $gray4;
+    }
+}
