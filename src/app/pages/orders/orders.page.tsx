@@ -10,6 +10,8 @@ import { Order, ORDER_STATUS } from '../../shared/models/order.model';
 import { OrderCard } from './order-card/order-card.component';
 // Style
 import './orders.page.scss';
+import { AddOrderModal } from './add-order/add-order.modal';
+import { SimpleButton } from '../../shared/components/buttons/simple-button/simple-button.component';
 
 const ORDER_LIST_ERROR_MSG: string = 'Erro ao listar compras. Por favor, tente novamente mais tarde.';
 const TOTAL_CASHBACK_ERROR_MSG: string = 'Erro bucar cashback acumulado. Por favor, tente novamente mais tarde.';
@@ -43,6 +45,7 @@ const OrdersPage = (): JSX.Element => {
     const [isOrdersLoading, setIsOrdersLoading] = useState<boolean>(false);
     const [totalCashback, setTotalCashback] = useState<number>(0);
     const [isTotalCashbackLoading, setIsTotalCashbackLoading] = useState<boolean>(false);
+    const [showAddOrderModal, setShowAddOrderModal] = useState<boolean>(false);
 
     // Effects
     useEffect(() => {
@@ -66,25 +69,48 @@ const OrdersPage = (): JSX.Element => {
     }, []);
 
     return (
-        <main className="orders flexbox flex-column align-items--center">
-            <header className="mb-20">
-                <h3 className="text--align-center">Cashback acumulado:</h3>
-                <h2 className="text--align-center">
-                    {
-                        isTotalCashbackLoading ?
-                            '...'
-                            :
-                            Util.toBRL(totalCashback)
-                    }
-                </h2>
-            </header>
+        <React.Fragment>
+            <main className="orders flexbox flex-column align-items--center">
+                <header className="mb-10">
+                    <h3 className="text--align-center">Cashback acumulado:</h3>
+                    <h2 className="text--align-center">
+                        {
+                            isTotalCashbackLoading ?
+                                '...'
+                                :
+                                Util.toBRL(totalCashback)
+                        }
+                    </h2>
+                </header>
+
+                {
+                    isOrdersLoading ?
+                        '...'
+                        :
+                        <React.Fragment>
+                            <div className="orders__button-container flexbox justify-content--end width-100">
+                                <SimpleButton
+                                    className="orders__add-buton text--white hoverable mb-10"
+                                    onClick={() => setShowAddOrderModal(true)}
+                                >
+                                    Novo
+                                </SimpleButton>
+                            </div>
+
+                            {
+                                orders.map((order: Order) => (
+                                    <OrderCard order={order} key={order.id} />
+                                ))
+                            }
+                        </React.Fragment>
+                }
+            </main>
 
             {
-                orders.map((order: Order) => (
-                    <OrderCard order={order} key={order.id} />
-                ))
+                showAddOrderModal &&
+                <AddOrderModal onClose={() => setShowAddOrderModal(false)} />
             }
-        </main>
+        </React.Fragment>
     );
 };
 

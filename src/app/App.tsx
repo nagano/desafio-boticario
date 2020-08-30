@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import { MainRoutes } from './routes/main.routes';
 // Styles
 import 'react-toastify/dist/ReactToastify.min.css';
+import "react-datepicker/dist/react-datepicker.min.css";
 
 // Shared history
 export const history = createBrowserHistory();

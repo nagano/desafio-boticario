@@ -2,6 +2,7 @@
 import Hash from './hash.service';
 // Models
 import { User } from '../models/user.model';
+import { Order } from '../models/order.model';
 
 export default {
 
@@ -33,6 +34,19 @@ export default {
 
     listOrders(): Promise<null> {
         console.log('Listing user orders');
+
+        return new Promise((resolve, reject) => {
+            randomTimeout(() => {
+                resolve();
+            });
+        });
+    },
+
+    addOrder(newOrder: Order): Promise<null> {
+        console.log('Adding new order');
+        console.log(`id: ${newOrder.id}`);
+        console.log(`value: ${newOrder.value}`);
+        console.log(`date: ${newOrder.date}`);
 
         return new Promise((resolve, reject) => {
             randomTimeout(() => {

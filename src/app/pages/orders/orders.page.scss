@@ -1,4 +1,5 @@
 @import '../../shared/style/base/appDimensions';
+@import '../../shared/style/base/colors';
 @import '../../shared/style/layout/mediaQuery';
 
 .orders {
@@ -7,5 +8,17 @@
     @include bp-medium {
         padding: 20px 10px;
         padding-top: $headerHeightMobile + 20;
+    }
+
+    &__button-container {
+        max-width: 600px;
+    }
+
+    &__add-buton {
+        background-color: $blue2;
+        box-shadow: $boxShadowLowDefault;
+        font-size: 1rem;
+        padding: 6px 12px;
+        border-radius: 0;
     }
 }
