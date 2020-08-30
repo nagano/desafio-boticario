@@ -10,8 +10,13 @@
         box-shadow: $boxShadowLowDefault;
         padding: 35px 25px;
 
-        @include bp-medium {
-            width: 95%;
+        @include bp-x-small {
+            height: 100%;
+            max-width: none;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 

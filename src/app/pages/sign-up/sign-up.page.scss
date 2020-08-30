@@ -7,8 +7,14 @@
     & > .default-page-container {
         max-width: 600px;
 
-        @include bp-medium {
-            max-width: 400px;
+        @include bp-x-small {
+            height: 100%;
+            width: 100%;
+            max-width: none;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 
