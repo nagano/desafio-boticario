@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 // Services
 import MockedAPI from '../../shared/services/api.service';
 import Notification, { NOTIFICATION_ID } from '../../shared/services/notification.service';
+import Storage from '../../shared/services/storage.service';
+// Constants
 // Components
 import { LoadingButton } from '../../shared/components/buttons/loading-button/loading-button.component';
 import { LabeledInput } from '../../shared/components/inputs/labeled-input/labeled-input.component';
@@ -10,6 +12,7 @@ import { LabeledInput } from '../../shared/components/inputs/labeled-input/label
 import { history } from '../../App';
 // Style
 import './login.page.scss';
+import { STORAGE_KEY } from '../../shared/constants/storage.constants';
 
 // Notification messages
 const INCOMPLETE_FORM_MSG: string = 'Por favor, preencha todos os campos.';
@@ -35,6 +38,7 @@ const LoginPage = (): JSX.Element => {
         MockedAPI
             .login(email, password)
             .then(() => {
+                Storage.session.set(STORAGE_KEY.IS_AUTHENTICATED, '1');
                 history.push('/orders');
             })
             .catch(() => {
