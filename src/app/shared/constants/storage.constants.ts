@@ -1,0 +1,3 @@
+export enum STORAGE_KEY {
+    IS_AUTHENTICATED = 'SVNfQVVUSEVOVElDQVRFRA=='
+};
