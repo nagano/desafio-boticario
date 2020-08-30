@@ -13,6 +13,8 @@ import { history } from '../../App';
 // Style
 import './login.page.scss';
 import { STORAGE_KEY } from '../../shared/constants/storage.constants';
+// Assets
+const logo: string = require('../../assets/logo.boticario.png');
 
 // Notification messages
 const INCOMPLETE_FORM_MSG: string = 'Por favor, preencha todos os campos.';
@@ -54,9 +56,13 @@ const LoginPage = (): JSX.Element => {
     return (
         <div className="login flex-center-absolute height-100">
             <main className="login__container">
-                <h1 className="text--align-center mb-30">
-                    Portal do revendedor Boticário
-                </h1>
+                <header className="flexbox flex-column align-items--center">
+                    <img className="login__logo" src={logo} alt="logo" />
+
+                    <h1 className="text--align-center mb-30">
+                        Portal do revendedor Boticário
+                    </h1>
+                </header>
 
                 <div className="mb-30">
                     <LabeledInput
