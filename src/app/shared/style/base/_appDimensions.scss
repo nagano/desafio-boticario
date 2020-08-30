@@ -1,3 +1,8 @@
+// Z-index
+$zIndexDefault: 1;
+$zIndexModalOverlay: 900;
+$zIndexModal: 901;
+
 // Box shadow
 $boxShadowLowDefault: 2px 2px 4px #aaa;
 $boxShadowMediumDefault: 3px 3px 6px #aaa;
@@ -11,3 +16,7 @@ $cornerRadius: 5px;
 $headerHeight: 70px;
 $headerHeightMobile: 50px;
 $headerBoxShadow: 0px 2px 3px #aaa;
+
+// Modal
+$modalBoxShadow: 2px 2px 3px #777;
+$modalPadding: 30px 20px;
